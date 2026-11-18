@@ -1,0 +1,600 @@
+
+/* ==========================================
+   PAH/NA SHARED COLORS, FONTS AND VARIABLES
+   ========================================== */
+
+:root {
+  --brown: #5f4434;
+  --dark: #3b2a22;
+  --pink: #ffbab3;
+  --light-pink: #f5cbd6;
+  --cream: #f8f6e9;
+
+  --side-space: 50px;
+  --inset: 30px;
+
+  --heading-font: "Ibarra Real Nova", serif;
+  --body-font: "Raleway", sans-serif;
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --side-space: 40px;
+    --inset: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  :root {
+    --side-space: 20px;
+    --inset: 0px;
+  }
+}
+
+
+/* ==========================================
+   GENERAL STYLING
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--dark);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.site-header {
+  background-color: var(--dark);
+  color: #ffffff;
+  padding: 14px 5%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.site-logo {
+  width: 115px;
+  height: 55px;
+  object-fit: contain;
+}
+
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+
+.main-navigation {
+  flex: 1;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+  opacity: 0.7;
+}
+
+
+/* ==========================================
+   HEADER ICONS
+   ========================================== */
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.header-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 36px;
+}
+
+.header-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+
+.contact-main {
+  background-color: var(--cream);
+  padding: 40px 0 45px;
+  min-height: 650px;
+}
+
+
+/* ==========================================
+   HEADING AND INTRODUCTION
+   ========================================== */
+
+.contact-intro {
+  text-align: left;
+  max-width: 1100px;
+  margin: 0 auto 32px;
+  padding: 0 15px;
+}
+
+.contact-intro h1 {
+  font-family: var(--heading-font);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: left;
+  margin: 0 0 8px;
+}
+
+.contact-intro p {
+  font-family: var(--body-font);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  margin: 0;
+  max-width: 780px;
+}
+
+
+/* ==========================================
+   CONTACT LAYOUT
+   ========================================== */
+
+.contact-layout {
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* ==========================================
+   CONTACT FORM
+   ========================================== */
+
+.contact-form {
+  padding: 10px 30px 10px 15px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.form-group label span {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--brown);
+  border-radius: 3px;
+  padding: 12px 14px;
+  background-color: var(--cream);
+  color: var(--dark);
+  font-family: var(--body-font);
+  font-size: 14px;
+}
+
+.form-group input {
+  min-height: 48px;
+}
+
+.form-group textarea {
+  min-height: 155px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #66574f;
+  opacity: 1;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: var(--cream);
+  border-color: var(--dark);
+  box-shadow: none;
+}
+
+.hint {
+  font-size: 12px;
+  margin: 0 0 7px;
+}
+
+
+/* ==========================================
+   SUBMIT BUTTON
+   ========================================== */
+
+.submit-button {
+  display: inline-block;
+  min-width: 145px;
+  padding: 12px 30px;
+  border: 1px solid var(--dark);
+  border-radius: 3px;
+  background-color: var(--brown);
+  color: #ffffff;
+  font-family: var(--body-font);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--dark);
+}
+
+.form-status {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   CONTACT INFORMATION CARD
+   ========================================== */
+
+.contact-info {
+  height: auto;
+  min-height: 0;
+  padding: 22px 30px;
+  background-color: var(--light-pink);
+  border: 1px solid var(--dark);
+  border-radius: 4px;
+}
+
+.contact-info h2 {
+  font-family: var(--heading-font);
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 23px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.contact-detail a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.contact-detail a:hover {
+  text-decoration: underline;
+}
+
+.contact-icon {
+  width: 25px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 21px;
+}
+
+.social-handle {
+  margin-top: 35px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   CONTACT PAGE FOOTER
+   ========================================== */
+
+.contact-footer {
+  background-color: var(--light-pink);
+  padding: 30px 90px;
+}
+
+.contact-footer-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-footer-brand {
+  max-width: 460px;
+}
+
+.contact-footer-logo {
+  font-family: var(--heading-font);
+  font-size: 5.5rem;
+  line-height: 1.1;
+  color: var(--brown);
+  margin-bottom: 0;
+}
+
+.contact-footer-text {
+  font-family: var(--body-font);
+  font-size: 0.85rem;
+  margin-top: 25px;
+}
+
+.contact-footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 10px;
+}
+
+.contact-footer-column h4 {
+  font-family: var(--heading-font);
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: var(--dark);
+}
+
+.contact-footer-column a {
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.contact-footer-column a:hover {
+  color: var(--cream);
+}
+
+
+/* ==========================================
+   SOCIAL MEDIA ICONS
+   ========================================== */
+
+.contact-socials {
+  display: grid;
+  grid-template-columns: repeat(3, 32px);
+  gap: 14px 20px;
+}
+
+.contact-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--dark);
+  border-radius: 50%;
+  color: var(--dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-socials a:hover {
+  background-color: var(--dark);
+  color: var(--cream);
+}
+
+
+/* ==========================================
+   COPYRIGHT
+   ========================================== */
+
+.contact-copyright {
+  background-color: var(--dark);
+  color: var(--cream);
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 0.9rem;
+}
+
+.contact-copyright p {
+  margin: 0;
+}
+
+.contact-copyright a {
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.contact-copyright a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   ACCESSIBILITY
+   ========================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #8a4b69;
+  outline-offset: 3px;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN - HEADER AND CONTENT
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  .main-navigation {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .nav-list {
+    gap: 25px;
+  }
+
+  .contact-form {
+    padding: 10px 15px 30px;
+  }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN - FOOTER
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  .contact-footer {
+    padding: 30px 40px;
+  }
+
+  .contact-footer-main {
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+
+  .contact-footer-brand {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE DESIGN
+   ========================================== */
+
+@media (max-width: 576px) {
+
+  .site-header {
+    padding: 12px 5%;
+  }
+
+  .site-logo {
+    width: 95px;
+    height: 45px;
+  }
+
+  .header-icons {
+    gap: 10px;
+  }
+
+  .header-icons svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .nav-list {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .nav-list a {
+    font-size: 12px;
+  }
+
+  .contact-main {
+    padding: 30px 0 40px;
+  }
+
+  .contact-intro {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  .contact-intro h1 {
+    font-size: 28px;
+  }
+
+  .contact-intro p {
+    font-size: 13px;
+  }
+
+  .contact-form {
+    padding: 0 10px 30px;
+  }
+
+  .contact-info {
+    min-height: auto;
+    padding: 28px 22px;
+  }
+
+  .contact-footer {
+    padding: 30px 20px;
+  }
+
+  .contact-footer-main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 20px;
+  }
+
+  .contact-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .contact-footer-logo {
+    font-size: 4rem;
+  }
+
+  .contact-copyright {
+    padding: 25px 12px;
+    font-size: 0.8rem;
+  }
+
+}
